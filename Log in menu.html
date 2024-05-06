@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arellano University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: url('background.jpg');
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote {
+            font-style: italic;
+            color: #666;
+        }
+
+        .founder-info {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .login-container {
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-container label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 22px); /* Adjust for padding and border */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="vision.html">Vision</a>
+        <a href="hymn.html">Arellano Hymn</a>
+        <a href="Contact us.html">Contact us</a>
+    </nav>
+
+    <div class="container">
+        <img src="c:\Users\Charles\Desktop\semi final exam\logo.png" alt="Arellano University Logo" style="display: block; margin: 0 auto;">
+        <p class="founder-info">
+            <strong>Florentino P. Cayco Sr.</strong><br>
+            Founder and First President
+        </p>
+
+        <div class="login-container">
+            <h2>Login</h2>
+            <form onsubmit="return loginUser()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <script>
+         function loginUser() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Here, you can add your logic to authenticate the user
+            // For simplicity, let's assume username and password are both "admin"
+            if (username === "admin" && password === "admin") {
+                alert("Login successful!");
+                window.location.href = "home.html"; // Redirect to home page
+                return false; // Prevent form submission
+            } else {
+                alert("Invalid username or password. Please try again.");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body
+
